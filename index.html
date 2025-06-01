@@ -5,59 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Employalty – Loyalty Tools for Small Teams</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style>
-    :root {
-      --bg: #FFFDF9;
-      --text: #2C3E50;
-      --accent: #89E1D0;
-      --coral: #F77C6B;
-      --yellow: #FFE17B;
-    }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--text);
-    }
-
-    header h1 {
-      font-size: 2.5em;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
+  <!-- ✅ Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#FFFDF9',
+            text: '#2C3E50',
+            accent: '#89E1D0',
+            coral: '#F77C6B',
+            yellow: '#FFE17B',
+            plum: '#7d6e83',
+            plumDark: '#6a5d70'
+          }
+        }
       }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
     }
   </style>
 </head>
 
-<body>
+<body class="bg-bg text-text">
 
   <!-- Header -->
-  <header class="text-center py-12 px-4 bg-[var(--accent)]">
+  <header class="text-center py-12 px-4 bg-accent">
     <img src="EmployaltyLogo.png" alt="Employalty Logo" class="mx-auto mb-4 w-24 h-24">
-    <h1 class="font-bold mb-2">Employalty</h1>
+    <h1 class="text-3xl font-bold mb-2">Employalty</h1>
     <p class="text-lg mb-4">Smart loyalty and recognition tools for small, people-first teams.</p>
-    <a class="inline-block bg-[var(--text)] text-white px-6 py-2 rounded hover:bg-[var(--coral)] font-semibold transition" href="mailto:hello@employalty.co.uk?subject=Interested%20in%20Employalty">Join the Beta</a>
+    <a class="inline-block bg-text text-white px-6 py-2 rounded hover:bg-coral font-semibold transition" href="mailto:hello@employalty.co.uk?subject=Interested%20in%20Employalty">Join the Beta</a>
   </header>
 
   <!-- Main -->
   <main class="max-w-4xl mx-auto px-4 py-12">
     <section class="mb-10">
-      <h2 class="text-xl font-bold border-l-4 border-[var(--accent)] pl-2 mb-2">Why Employalty?</h2>
+      <h2 class="text-xl font-bold border-l-4 border-accent pl-2 mb-2">Why Employalty?</h2>
       <p>Employalty helps you keep your best people — with simple tools to celebrate loyalty, recognise achievements, and show appreciation without needing a full HR department.</p>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-bold border-l-4 border-[var(--accent)] pl-2 mb-2">What You'll Get</h2>
+      <h2 class="text-xl font-bold border-l-4 border-accent pl-2 mb-2">What You'll Get</h2>
       <ul class="list-disc list-inside space-y-1">
         <li>🎉 Automated employee milestone tracking</li>
         <li>🏅 Custom digital loyalty rewards & certificates</li>
@@ -67,7 +61,7 @@
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-bold border-l-4 border-[var(--accent)] pl-2 mb-2">Made for Small Teams</h2>
+      <h2 class="text-xl font-bold border-l-4 border-accent pl-2 mb-2">Made for Small Teams</h2>
       <p>No clunky HR systems. No overhead. Just meaningful recognition that helps small businesses grow great cultures.</p>
     </section>
 
@@ -81,44 +75,44 @@
         <!-- Starter -->
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-lg font-semibold mb-1">Starter</h3>
-          <p class="text-3xl font-bold text-[#7d6e83] mb-4">£15<span class="text-base font-normal">/mo</span></p>
+          <p class="text-3xl font-bold text-plum mb-4">£15<span class="text-base font-normal">/mo</span></p>
           <ul class="text-sm text-left space-y-2 mb-4">
             <li>✔ Up to 10 employees</li>
             <li>✔ Anniversary email reminders</li>
             <li>✔ 1 admin user</li>
           </ul>
-          <a href="#" class="inline-block bg-[#7d6e83] text-white px-4 py-2 rounded font-semibold hover:bg-[#6a5d70] transition">Get Started</a>
+          <a href="#" class="inline-block bg-plum text-white px-4 py-2 rounded font-semibold hover:bg-plumDark transition">Get Started</a>
         </div>
 
         <!-- Team -->
-        <div class="bg-white p-6 rounded-xl shadow border-2 border-[#7d6e83]">
+        <div class="bg-white p-6 rounded-xl shadow border-2 border-plum">
           <h3 class="text-lg font-semibold mb-1">Team</h3>
-          <p class="text-3xl font-bold text-[#7d6e83] mb-4">£29<span class="text-base font-normal">/mo</span></p>
+          <p class="text-3xl font-bold text-plum mb-4">£29<span class="text-base font-normal">/mo</span></p>
           <ul class="text-sm text-left space-y-2 mb-4">
             <li>✔ Up to 50 employees</li>
             <li>✔ Branded dashboard</li>
             <li>✔ Team recognition tools</li>
           </ul>
-          <a href="#" class="inline-block bg-[#7d6e83] text-white px-4 py-2 rounded font-semibold hover:bg-[#6a5d70] transition">Try Team</a>
+          <a href="#" class="inline-block bg-plum text-white px-4 py-2 rounded font-semibold hover:bg-plumDark transition">Try Team</a>
         </div>
 
         <!-- Pro -->
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-lg font-semibold mb-1">Pro</h3>
-          <p class="text-3xl font-bold text-[#7d6e83] mb-4">£59<span class="text-base font-normal">/mo</span></p>
+          <p class="text-3xl font-bold text-plum mb-4">£59<span class="text-base font-normal">/mo</span></p>
           <ul class="text-sm text-left space-y-2 mb-4">
             <li>✔ Unlimited employees</li>
             <li>✔ Custom rewards</li>
             <li>✔ Priority support</li>
             <li>✔ API access</li>
           </ul>
-          <a href="#" class="inline-block bg-[#7d6e83] text-white px-4 py-2 rounded font-semibold hover:bg-[#6a5d70] transition">Go Pro</a>
+          <a href="#" class="inline-block bg-plum text-white px-4 py-2 rounded font-semibold hover:bg-plumDark transition">Go Pro</a>
         </div>
       </div>
     </section>
 
     <section class="mt-12">
-      <h2 class="text-xl font-bold border-l-4 border-[var(--accent)] pl-2 mb-2">Contact Us</h2>
+      <h2 class="text-xl font-bold border-l-4 border-accent pl-2 mb-2">Contact Us</h2>
       <p>We’re currently onboarding early adopters. Want in?</p>
       <p>Email: <a href="mailto:hello@employalty.co.uk">hello@employalty.co.uk</a></p>
     </section>
